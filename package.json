@@ -1,0 +1,39 @@
+{
+  "name": "ts-api-server-express-mongo",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "author": "jchiang",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start-debug": "DEBUG=myApp:server ts-node ./src/index.ts",
+	"start-db": "mongod --dbpath data",
+	"test": "jest --forceExit"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "http-errors": "^1.6.3",
+    "mongoose": "^5.0.15",
+    "morgan": "^1.9.0",
+    "ts-node": "^6.0.0",
+    "typescript": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.3",
+    "@types/debug": "^0.0.30",
+    "@types/express": "^4.11.1",
+    "@types/helmet": "^0.0.37",
+    "@types/http-errors": "^1.6.1",
+    "@types/jest": "^22.2.3",
+    "@types/mongoose": "^5.0.10",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^9.6.6",
+    "jest": "^22.4.3",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.4.4"
+  }
+}
