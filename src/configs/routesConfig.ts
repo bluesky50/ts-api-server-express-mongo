@@ -5,6 +5,8 @@ import Comments from '../models/Comment';
 import CollectionAdapter from '../classes/CollectionAdapter';
 import BasicController from '../classes/BasicController';
 
+import IRouteConfig from '../interfaces/IRouteConfig';
+
 import { UserValidationSchema, PostValidationSchema, CommentValidationSchema } from '../helpers/validationSchemas'
 
 const usersController = new BasicController(new CollectionAdapter(User), UserValidationSchema);
@@ -15,25 +17,25 @@ const commentsController = new BasicController(new CollectionAdapter(Comments), 
  * Sets the route configurations that the server uses to initialize routes.
  */
 const routesConfig = {
-	usersEndpoints: {
+	usersEndpoints: <IRouteConfig>{
 		route: '/users',
 		type: 'standard', // standard or custom
 		controller: usersController,
 		useBuilder: false,
 		builder: null, // function that will build the routers.
 	},
-	postsEndpoints: {
+	postsEndpoints: <IRouteConfig>{
 		route: '/posts',
 		type: 'standard',
 		controller: postsController,
 		useBuilder: false,
 		builder: null
 	},
-	commentsEndpoints: {
+	commentsEndpoints: <IRouteConfig>{
 		route: '/comments',
 		type: 'standard',
 		controller: commentsController,
-		userBuilder: false,
+		useBuilder: false,
 		builder: null
 	}
 }

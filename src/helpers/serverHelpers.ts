@@ -3,7 +3,7 @@ import serverConfig from '../configs/serverConfig';
 const debug = require('debug')(`${serverConfig.appName}:server`);
 
 /**
- * Normalize a port into a number, string, or false.
+ * A function to normalize a port into a number, string, or false.
  */
 export function normalizePort(val: number|string): number|string|boolean {
 	const port: number = (typeof(val) === 'string') ? parseInt(val, 10) : val;
@@ -35,7 +35,7 @@ export function onError(port: any) {
 }
 
 /**
- * function that handles server listening events.
+ * A function that handles server listening events.
  */
 export function onListening(server: any) {
 	return function() {

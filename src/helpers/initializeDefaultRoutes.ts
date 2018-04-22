@@ -1,6 +1,5 @@
 import { Application } from 'express';
 
-// Mongoose models
 import User from '../models/User';
 import Post from '../models/Post';
 import Comments from '../models/Comment';
