@@ -1,3 +1,6 @@
+/**
+ * Response status codes.
+ */
 export const SC = {
 	STATUS_OK: 200,
 	STATUS_BAD_REQUEST: 400,

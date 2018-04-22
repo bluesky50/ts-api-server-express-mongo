@@ -7,7 +7,7 @@ interface IComment {
 }
 
 interface ICommentMongooseModel extends IComment, mongoose.Document {}
-interface ICommentMongooseModelStatic extends mongoose.Model<ICommentMongooseModel> {}
+// interface ICommentMongooseModelStatic extends mongoose.Model<ICommentMongooseModel> {}
 
 const CommentMongooseSchema: mongoose.Schema = new mongoose.Schema({
 	user: {
@@ -28,6 +28,7 @@ const CommentMongooseSchema: mongoose.Schema = new mongoose.Schema({
 	}
 }, { versionKey: false });
 
-const CommentMongooseModel = mongoose.model<ICommentMongooseModel, ICommentMongooseModelStatic>('Comment', CommentMongooseSchema);
+// const CommentMongooseModel = mongoose.model<ICommentMongooseModel, ICommentMongooseModelStatic>('Comment', CommentMongooseSchema);
+const CommentMongooseModel = mongoose.model<ICommentMongooseModel>('Comment', CommentMongooseSchema);
 
 export default CommentMongooseModel;

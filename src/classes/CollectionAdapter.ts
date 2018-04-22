@@ -4,7 +4,7 @@ import ICollectionAdapter from '../interfaces/ICollectionAdapter';
 import User from '../models/User';
 
 /**
- * Mongoose collection adapter class
+ * Mongoose collection adapter class that provides functionality to the Controller class.
  */
 export default class CollectionAdapter implements ICollectionAdapter {
 	// private MongooseCollection: mongoose.Model<mongoose.Document>;

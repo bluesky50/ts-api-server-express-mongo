@@ -7,7 +7,7 @@ const debug = require('debug')(`${serverConfig.appName}:server`);
 import IDatabase from '../interfaces/IDatabase';
 
 /**
- * Implements a connection to that Mongo database.
+ * Database class that interfaces with a Mongo database.
  */
 class Database implements IDatabase {
 	private dbUri: string;

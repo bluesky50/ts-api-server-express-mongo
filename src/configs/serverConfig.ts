@@ -1,3 +1,6 @@
+/**
+ * Server configuration variables.
+ */
 const serverConfig = {
 	appName: 'myApp',
 	port: 3000,

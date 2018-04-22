@@ -7,6 +7,11 @@ const debug = require('debug')(`${serverConfig.appName}:server`);
 
 import CollectionAdapter from '../classes/CollectionAdapter'
 
+/**
+ * A function that adds routes to the express.App based on the routeConfig specification.
+ * @param app 
+ * @param routeConfig 
+ */
 function buildRoutes(app: Application, routeConfig: any): void {
 	if (routeConfig.route || routeConfig.controller) {
 		if (routeConfig.type !== 'standard' && routeConfig.useBuilder && typeof(routeConfig.builder) === 'function') {

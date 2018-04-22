@@ -15,6 +15,9 @@ const debug = require('debug')(`${serverConfig.appName}:server`);
 
 import IServer from '../interfaces/IServer';
 
+/**
+ * Server class that interfaces with the functionality of the express.Application as well as other aspects of the program.
+ */
 export default class Server implements IServer {
 	private serverConfig;
 	private routesConfig;

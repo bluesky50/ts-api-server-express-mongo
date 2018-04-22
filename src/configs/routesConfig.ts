@@ -11,6 +11,9 @@ const usersController = new BasicController(new CollectionAdapter(User), UserVal
 const postsController = new BasicController(new CollectionAdapter(Post), PostValidationSchema);
 const commentsController = new BasicController(new CollectionAdapter(Comments), CommentValidationSchema);
 
+/**
+ * Sets the route configurations that the server uses to initialize routes.
+ */
 const routesConfig = {
 	usersEndpoints: {
 		route: '/users',

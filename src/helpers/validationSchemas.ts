@@ -1,3 +1,7 @@
+/**
+ * Validation schemas to cross check the req.body against.
+ */
+
 export const UserValidationSchema = {
 	username: 'string',
 	email: 'string',

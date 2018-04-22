@@ -7,7 +7,7 @@ interface IPost {
 }
 
 interface IPostMongooseModel extends IPost, mongoose.Document {}
-interface IPostMongooseModelStatic extends mongoose.Model<IPostMongooseModel> {}
+// interface IPostMongooseModelStatic extends mongoose.Model<IPostMongooseModel> {}
 
 const PostMongooseSchema: mongoose.Schema = new mongoose.Schema({
 	title: {
@@ -29,6 +29,7 @@ const PostMongooseSchema: mongoose.Schema = new mongoose.Schema({
 	}
 }, { versionKey: false });
 
-const PostMongooseModel = mongoose.model<IPostMongooseModel, IPostMongooseModelStatic>('Post', PostMongooseSchema);
+// const PostMongooseModel = mongoose.model<IPostMongooseModel, IPostMongooseModelStatic>('Post', PostMongooseSchema);
+const PostMongooseModel = mongoose.model<IPostMongooseModel>('Post', PostMongooseSchema);
 
 export default PostMongooseModel;

@@ -6,7 +6,7 @@ interface IUser {
 	about: string,
 }
 
-// interface IUserMongooseModel extends IUser, mongoose.Document {}
+interface IUserMongooseModel extends IUser, mongoose.Document {}
 // interface IUserMongooseModelStatic extends mongoose.Model<IUserMongooseModel> {}
 
 const UserSchema: mongoose.Schema = new mongoose.Schema({
@@ -29,9 +29,8 @@ const UserSchema: mongoose.Schema = new mongoose.Schema({
 	}
 }, { versionKey: false });
 
-// const UserMongooseModel = mongoose.model<IUserMongooseModel>('User', UserSchema);
-const UserMongooseModel = mongoose.model('User', UserSchema);
-
-// module.exports = UserMongooseModel;
+// const UserMongooseModel = mongoose.model('User', UserSchema);
+// const UserMongooseModel = mongoose.model<IUserMongooseModel, IUserMongooseModelStatic>('User', UserSchema);
+const UserMongooseModel = mongoose.model<IUserMongooseModel>('User', UserSchema);
 
 export default UserMongooseModel;

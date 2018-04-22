@@ -9,9 +9,12 @@ import BasicController from '../classes/BasicController';
 import CollectionAdapter from '../classes/CollectionAdapter';
 import buildStandardRouter from './buildStandardRouter';
 
-// Endpoint Router validation schemas.
 import { UserValidationSchema, PostValidationSchema, CommentValidationSchema } from '../helpers/validationSchemas'
 
+/**
+ * A function that creates the default routes for the server if none are provided to the server.
+ * @param app 
+ */
 function initializeDefaultRoutes(app: Application): void {
 
 	const usersController = new BasicController(new CollectionAdapter(User), UserValidationSchema);

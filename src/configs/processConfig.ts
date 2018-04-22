@@ -1,3 +1,7 @@
+/**
+ * Sets the process.env variables
+ */
+
 import serverConfig from './serverConfig';
 
 const env = process.env.NODE_ENV || serverConfig.env;

@@ -1,5 +1,10 @@
 import { Types } from 'mongoose';
 
+/**
+ * A function that validates the req.body against a provided schema.
+ * @param inputObj 
+ * @param schema 
+ */
 export function validateInput(inputObj: any, schema: object): boolean {
 	if (typeof(inputObj) !== 'object' || typeof(schema) !== 'object') {
 		return false;
@@ -55,33 +60,57 @@ export function validateInput(inputObj: any, schema: object): boolean {
 	return true;
 }
 
+/**
+ * A function that validates a value as a string.
+ * @param value 
+ */
 export function validateStringInput(value): boolean {
 	if (value === undefined || value === null) return false;
 	if (value && typeof(value) === 'string') return true;
 	return false;
 }
 
+/**
+ * A function that validates a value as a number.
+ * @param value 
+ */
 export function validateNumberInput(value): boolean {
 	if (value === undefined || value === null) return false;
 	if (value && typeof(value) === 'number') return true;
 	return false;
 }
 
+/**
+ * A function that validates a value as an array.
+ * @param value 
+ */
 export function validateArrayInput(value): boolean {
 	return Array.isArray(value);
 }
 
+/**
+ * A function that validates a value as an object.
+ * @param value
+ */
 export function validateObjectInput(value): boolean {
 	if (value === undefined || value === null) return false;
 	if (value && typeof(value) === 'object') return true;
 	return true;
 }
 
+/**
+ * A function that validates a value as a mongo object id.
+ * @param value 
+ */
 export function validateMongoId(value: any): boolean {
 	if (!value || value === undefined || value === null) return false;
 	return Types.ObjectId.isValid(value);
 }
 
+/**
+ * A function that takes a function and validates all other args with that function.
+ * @param args 
+ */
 export function testAll(...args): boolean {
 	const func = arguments[0];
 
