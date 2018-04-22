@@ -2,9 +2,9 @@
 This project is an API server built using NodeJS + Express and written in TypeScript. The server persists data in a Mongo Database. Tests have been written for each of endpoints using Jest + supertest.
 
 ## Features
-The project implements CRUD endpoints for Users, Posts, and Comments.
-The server persists data in a Mongo Database.
-Tests validate all endpoints.
+- The project implements CRUD endpoints for Users, Posts, and Comments.
+- The server persists data in a Mongo Database.
+- Tests validate all endpoints.
 
 ## Experience
 Created an api server in TypeScript.
@@ -16,26 +16,36 @@ Created helper functions that created routes when passed a route configuration o
 Created Jest tests for all routes in TypeScript.
 
 ## Models
+```
 Post { title, content, author }
+```
+```
 User { username, email, about }
+```
+```
 Comment { post, user, content }
+```
 
 ## Rotues
 
-GET /users - response { status, data }
-GET /users/:id - request: User, response { status, data }
-POST /users - request: User, response { status, data }
-PUT /users/:id - response { status, data }
-DELETE /users/:id - response { status, data }
-
-GET /posts - response { status, data }
-GET /posts/:id - request: Post, response { status, data }
-POST /posts - request: Post, response { status, data }
-PUT /posts/:id - response { status, data }
-DELETE /posts/:id - response { status, data }
-
-GET /comments - response { status, data }
-GET /comments/:id - request: Comment, response { status, data }
-POST /comments - request: Comment, response { status, data }
-PUT /comments/:id - response { status, data }
-DELETE /comments/:id - response { status, data }
+```
+1. GET /users - response: { status, data }
+2. GET /users/:id - request: User, response: { status, data }
+3. POST /users - request: User, response: { status, data }
+4. PUT /users/:id - response: { status, data }
+5. DELETE /users/:id - response: { status, data }
+```
+```
+1. GET /posts - response: { status, data }
+2. GET /posts/:id - request: Post, response: { status, data }
+3. POST /posts - request: Post, response: { status, data }
+4. PUT /posts/:id - response: { status, data }
+5. DELETE /posts/:id - response: { status, data }
+```
+```
+1. GET /comments - response: { status, data }
+2. GET /comments/:id - request: Comment, response: { status, data }
+3. POST /comments - request: Comment, response: { status, data }
+4. PUT /comments/:id - response: { status, data }
+5. DELETE /comments/:id - response: { status, data }
+```
